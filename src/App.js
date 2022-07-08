@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle } from './globalStyles/GlobalSyles';
+
+import Main from './componentes/main/Main'
+import LayOut from './template/LayOut';
 
 function App() {
   return (
-    <div className="App">
-  hello
-    </div>
+    <LayOut>
+      <GlobalStyle/> 
+      <Main/>
+    </LayOut>
   );
 }
 
