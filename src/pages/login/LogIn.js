@@ -11,7 +11,7 @@ const LogIn = () => {
         <Input type='email' name='email' />
         <Label>Contraseña</Label>
         <Input type='password' name='password' />
-        <Boton texto='LogIn' width='100%' style={{marginTop:'3rem'}}/>
+        <Boton texto='LogIn' width='50%' style={{marginTop:'3rem'}}/>
       </FormularioLogIn>
     </Container>
   )
