@@ -1,9 +1,11 @@
 import React from 'react'
 import { Container } from './style'
 
-const SideBar = () => {
+const SideBar = ({children}) => {
   return (
-    <Container>SideBar</Container>
+    <Container>
+      {children}
+    </Container>
   )
 }
 
