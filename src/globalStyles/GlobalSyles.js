@@ -13,6 +13,9 @@ export const GlobalStyle = createGlobalStyle`
         --fondo-gris:hsl(44, 24%, 80%);
 
         --size-links: 1.6rem;
+        --size-title:2rem;
+        --size-subtitle:1.8rem;
+        --size-parrafo:1.4rem;
 
         --sombras-cards:var(--gris-claro) 0px 7px 29px 0px;
 

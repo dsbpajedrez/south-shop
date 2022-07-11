@@ -1,12 +1,15 @@
 import React from 'react'
-import { CardContainer, Imagen } from './styles'
+import { CardContainer, Imagen, Parrafo, TituloProducto, Anchor } from './styles'
 
-const Producto = ({title,price, images}) => {
+
+const Producto = ({title,price, images,id}) => {
   return (
     <CardContainer>
-        <h1>{title}</h1>
+      <Anchor to={`/detail/${id}`} >
+        <TituloProducto>{title}</TituloProducto>
         <Imagen src={images[0]}/>
-        <p>{price}</p>
+        <Parrafo>${price}</Parrafo>
+      </Anchor>
     </CardContainer>
   )
 }

@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import {useEffect,useState} from 'react'
 
 export const useLlamadoAPI = (API)=>{
     const [productos, setProductos] =useState([])
@@ -6,7 +6,7 @@ export const useLlamadoAPI = (API)=>{
         fetch(API)
             .then(respuesta => respuesta.json())
             .then(data => setProductos(data))
-    })
+    },[])
     return productos
 }
 export default useLlamadoAPI;

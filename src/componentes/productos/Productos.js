@@ -7,9 +7,11 @@ const Productos = ({products}) => {
     <Contenedorproductos>
         {products?.length>0 && products?.map(item=> 
         <Producto 
+        key={item.id}
         title={item.title}
         price={item.price}
         images={item.images}
+        id={item.id}
         />
         )}
     </Contenedorproductos>

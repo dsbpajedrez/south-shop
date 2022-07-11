@@ -10,7 +10,7 @@ export const Item = styled.li`
     border-bottom:1px solid var(--gris-claro);
     padding:0.5rem;
     cursor:pointer;
-    transition: padding 0.5s;
+    transition: padding 50ms;
     &:hover{
         padding:1rem;
     }
