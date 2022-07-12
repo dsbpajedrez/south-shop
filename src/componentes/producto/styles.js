@@ -11,16 +11,19 @@ export const CardContainer = styled.div`
     flex-direction:column;
     align-items:center;
     background-color:white;
-    box-shadow:var(--sombras-cards);
-    cursor:pointer;
+    box-shadow:var(--sombras-cards);    
+    cursor:${({pointer})=> pointer =='true'? 'pointer':'initial'};
     transition: 450ms all;
     -webkit-transform-origin:center right;
             transform-origin:center rigth;
     &:hover{
         -webkit-transform:translate3d(100px,0,0);
                 transform:translate3d(100px,0,0);
-                transform:scale(1.3);
-                }
+                transform:scale(1.2);
+                z-index:100;
+    };
+ 
+        
 
 `
 export const Imagen = styled.img`
@@ -39,4 +42,6 @@ export const Parrafo = styled.p`
 export const Anchor = styled(Link)`
     text-decoration:none;
     underline:none;
+    cursor:${({pointer})=> pointer =='true'? 'pointer':'initial'};
+
 `

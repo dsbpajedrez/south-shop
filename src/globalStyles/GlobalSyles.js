@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size:62.5%;
 
         --verde-claro :hsl(116, 73%, 74%);
+        --soft-white:hsl(169, 9%, 99%);
         --azul-claro:hsl(181, 32%, 63%);
         --gris-claro:hsl(181, 2%, 71%);
         --fondo-gris:hsl(44, 24%, 80%);

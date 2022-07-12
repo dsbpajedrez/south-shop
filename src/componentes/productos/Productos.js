@@ -6,7 +6,7 @@ const Productos = ({products}) => {
   return (
     <Contenedorproductos>
         {products?.length>0 && products?.map(item=> 
-        <Producto 
+        <Producto        
         key={item.id}
         title={item.title}
         price={item.price}
