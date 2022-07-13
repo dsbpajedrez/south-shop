@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const ItemProducto = styled.li`
     display:flex;
     justify-content:space-around;
+    gap:1rem;
+    padding:0.5rem;
+    width:100%;
    
 `
 export const Titulo = styled.p`
     color:var(--soft-white);
-    font-size:3rem;
+    font-size:1.2rem;
 `
 export const ContenedorImagenes = styled.div`
     display:flex;
