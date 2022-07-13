@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const Container = styled.div`
     grid-column:1/14;
-    grid-row:1/3;  
+    grid-row:1/3; 
+    
     display:flex;
     justify-content:space-between;
     // border-bottom:1px solid var(--gris-claro) ;
@@ -25,6 +26,7 @@ export const RightSide = styled.div`
     display:flex;
     justify-content:space-between;
     width:15%;
+    position:relative;
 `
 export const Navegacion = styled.ul`
     width:50%;

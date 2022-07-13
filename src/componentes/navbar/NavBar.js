@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, IMGShoppingCart, ItemsNavegacion, Links, Logo, Navegacion, RightSide } from './styles'
 import shoppingCart from '../../assets/icon_shopping_cart.svg'
+import MenuCarrito from '../menuCarrito/MenuCarrito'
 
 
 const NavBar = () => {
+  const [menu, setMenu]= useState(false)
   return (
     <Container>
         <Logo src='https://pbs.twimg.com/profile_images/573510708454813696/y-N-508i_400x400.png'/>
@@ -15,7 +17,9 @@ const NavBar = () => {
         </Navegacion>
         <RightSide>
           <p>Email</p>
-          <IMGShoppingCart src={shoppingCart}/>
+          <IMGShoppingCart src={shoppingCart}  onClick={()=>setMenu(!menu)}/>
+          {menu && <MenuCarrito/>}
+          
         </RightSide>
     </Container>
   )
