@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ItemProducto = styled.li`
     display:flex;
     justify-content:space-around;
-    // color:var(--soft-white);
+   
 `
 export const Titulo = styled.p`
     color:var(--soft-white);

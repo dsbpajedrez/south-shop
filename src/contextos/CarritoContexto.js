@@ -13,11 +13,18 @@ const ProductoContext = ({children})=>{
             ...state,
             cart: [...state.cart, payload]
         })
-        return state
+       
+    }
+    const removeFromCart =payload=>{
+        setState({
+            ...state,
+            cart: state.cart.filter(item=> item.id!=payload.id)
+        })
+        
     }
 
     return(
-        <ctxProducto.Provider value={{state,addToCart}} >
+        <ctxProducto.Provider value={{state,addToCart,removeFromCart}} >
             {children}
         </ctxProducto.Provider>
     )

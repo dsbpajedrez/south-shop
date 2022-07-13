@@ -15,9 +15,9 @@ const NavBar = () => {
           <ItemsNavegacion><Links to='/'>Contacto</Links></ItemsNavegacion>
           <ItemsNavegacion><Links to='/'>Términos y condiciones</Links></ItemsNavegacion>
         </Navegacion>
-        <RightSide onClick={()=>setMenu(!menu)}>
+        <RightSide >
           <p>Email</p>
-          <IMGShoppingCart src={shoppingCart}/>
+          <IMGShoppingCart src={shoppingCart} onClick={()=>setMenu(!menu)}/>
           {menu && <MenuCarrito/>}
           
         </RightSide>
