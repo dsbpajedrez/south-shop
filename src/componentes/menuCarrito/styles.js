@@ -18,3 +18,7 @@ export const ItemProducto = styled.li`
     justify-content:space-between;
     color:var(--soft-white);
 `
+export const ContenedorImagenes = styled.div`
+    display:flex;
+
+`

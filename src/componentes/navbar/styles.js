@@ -21,6 +21,7 @@ export const Logo = styled.img`
 export const IMGShoppingCart = styled.img`
     width:3rem;
     height:3rem;
+    cursor:pointer;
 `
 export const RightSide = styled.div`
     display:flex;

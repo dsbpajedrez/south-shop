@@ -1,12 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { useParams } from 'react-router-dom'
+import { ctxProducto } from '../../contextos/CarritoContexto'
 import OneProduct from '../../hooks/useProductById'
 import Producto from '../producto/Producto'
 import { Boton, Container } from './style'
 
 const DetalleProducto = () => {
+    const {addToCart,state} = useContext(ctxProducto)
+    console.log(state)
     const id= useParams().id
     const product = OneProduct(id)
+    
     return (
         <>
        {product &&
@@ -18,7 +22,7 @@ const DetalleProducto = () => {
             images={product?.images ?? []}
             id={product?.id ?? ''}
             />
-            <Boton>Add to cart</Boton>
+            <Boton onClick={()=>addToCart(product)}>Add to cart</Boton>
         </Container>
          }  
         </>
