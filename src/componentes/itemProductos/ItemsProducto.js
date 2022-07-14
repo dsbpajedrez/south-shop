@@ -26,7 +26,8 @@ const ItemsProducto = ({product}) => {
             padding:'0.5rem',
             width:'10px',
             height:'10px',
-            borderRadius:'50%'
+            borderRadius:'50%',
+            cursor:'pointer'
             }}/>
         </ContenedorImagenes>
     </ItemProducto>

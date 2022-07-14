@@ -5,7 +5,7 @@ export const Contenedorproductos = styled.div`
      flex-wrap:wrap;
      justify-content:space-around;
      gap:1rem;
-     overflow:auto;
+     overflow-y:auto;
      height:100vh;
      &::-webkit-scrollbar {
           width: 10px;

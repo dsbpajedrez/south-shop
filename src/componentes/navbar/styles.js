@@ -19,9 +19,19 @@ export const Logo = styled.img`
     border-radius:50%;
 `
 export const IMGShoppingCart = styled.img`
-    width:3rem;
-    height:3rem;
+    width:3.5rem;
+    height:3.5rem;
     cursor:pointer;
+    position:relative;
+`
+export const NumeroItems = styled.p`
+margin:0;
+    width:fit-content;
+    height:fit-content;
+    position:absolute;
+    right:1.5px;
+    top:0;
+    
 `
 export const RightSide = styled.div`
     display:flex;

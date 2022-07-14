@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
-import { Container, IMGShoppingCart, ItemsNavegacion, Links, Logo, Navegacion, RightSide } from './styles'
+import React, {useState,useContext} from 'react'
+import { Container, IMGShoppingCart, ItemsNavegacion, Links, Logo, Navegacion, NumeroItems, RightSide } from './styles'
 import shoppingCart from '../../assets/icon_shopping_cart.svg'
+import shoppingCartNotification from '../../assets/icon_shopping_cart_notification.svg'
 import MenuCarrito from '../menuCarrito/MenuCarrito'
+import { ctxProducto } from '../../contextos/CarritoContexto'
 
 
 const NavBar = () => {
+  const {state} =useContext(ctxProducto)
   const [menu, setMenu]= useState(false)
   return (
     <Container>
@@ -17,7 +20,15 @@ const NavBar = () => {
         </Navegacion>
         <RightSide >
           <p>Email</p>
-          <IMGShoppingCart src={shoppingCart} onClick={()=>setMenu(!menu)}/>
+          {state.cart.length>0 ?(
+            <>
+            <IMGShoppingCart src={shoppingCartNotification}onClick={()=>setMenu(!menu)}/>
+            <NumeroItems>{state.cart.length}</NumeroItems>
+            </>
+          ) 
+          : <IMGShoppingCart src={shoppingCart} onClick={()=>setMenu(!menu)}/>
+         }
+          
           {menu && <MenuCarrito/>}
           
         </RightSide>
