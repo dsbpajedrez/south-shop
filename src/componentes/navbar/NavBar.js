@@ -1,9 +1,8 @@
 import React, {useState,useContext} from 'react'
-import { Container, IMGShoppingCart, ItemsNavegacion, Links, Logo, Navegacion, NumeroItems, RightSide } from './styles'
-import shoppingCart from '../../assets/icon_shopping_cart.svg'
-import shoppingCartNotification from '../../assets/icon_shopping_cart_notification.svg'
+import { Container, ItemsNavegacion, Links, Logo, Navegacion, RightSide } from './styles'
 import MenuCarrito from '../menuCarrito/MenuCarrito'
 import { ctxProducto } from '../../contextos/CarritoContexto'
+import CartWidget from '../cartWidget/CartWidget'
 
 
 const NavBar = () => {
@@ -20,17 +19,8 @@ const NavBar = () => {
         </Navegacion>
         <RightSide >
           <p>Email</p>
-          {state.cart.length>0 ?(
-            <>
-            <IMGShoppingCart src={shoppingCartNotification}onClick={()=>setMenu(!menu)}/>
-            <NumeroItems>{state.cart.length}</NumeroItems>
-            </>
-          ) 
-          : <IMGShoppingCart src={shoppingCart} onClick={()=>setMenu(!menu)}/>
-         }
-          
-          {menu && <MenuCarrito/>}
-          
+         <CartWidget state={state} setMenu={setMenu} menu={menu}/>          
+          {menu && <MenuCarrito/>}          
         </RightSide>
     </Container>
   )
