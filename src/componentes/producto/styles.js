@@ -14,12 +14,12 @@ export const CardContainer = styled.div`
     box-shadow:var(--sombras-cards);    
     cursor:${({pointer})=> pointer =='true'? 'pointer':'initial'};
     transition: 450ms all;
-    -webkit-transform-origin:center right;
-            transform-origin:center rigth;
+    -webkit-transform-origin:center top;
+            transform-origin:center top;
     &:hover{
-        -webkit-transform:translate3d(100px,0,0);
-                transform:translate3d(100px,0,0);
-                transform:scale(1.2);
+        -webkit-transform:translate3d(0,0,-100px);
+                transform:translate3d(0,0,100px);
+                transform:scale(1.1);
                 z-index:100;
     };
  
