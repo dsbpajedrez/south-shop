@@ -1,12 +1,10 @@
 import React from 'react'
 import { Container } from './styles'
-
 import { Routes, Route} from 'react-router-dom'
-import LogIn from '../../pages/login/LogIn'
-import Home from '../../pages/home/Home'
-import Register from '../../pages/register/Register'
-import DetalleProducto from '../detalleProducto/DetalleProducto'
-
+import Home from '../../pages/Home/Home'
+import Register from '../../pages/Register/Register'
+import DetalleProducto from '../DetalleProducto/DetalleProducto'
+import LogIn from '../../pages/Login/LogIn'
 const Main = () => {
   return (
     <Container>

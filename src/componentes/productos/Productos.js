@@ -1,5 +1,5 @@
 import React from 'react'
-import Producto from '../producto/Producto'
+import Producto from '../Producto/Producto'
 import { Contenedorproductos } from './styles'
 
 const Productos = ({products}) => {

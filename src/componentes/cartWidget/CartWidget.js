@@ -1,5 +1,5 @@
 import React from 'react'
-import { IMGShoppingCart, NumeroItems } from '../navbar/styles'
+import { IMGShoppingCart, NumeroItems } from '../Navbar/styles'
 import shoppingCart from '../../assets/icon_shopping_cart.svg'
 import shoppingCartNotification from '../../assets/icon_shopping_cart_notification.svg'
 

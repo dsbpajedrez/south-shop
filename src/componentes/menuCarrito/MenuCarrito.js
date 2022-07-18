@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import ItemsProducto from '../itemProductos/ItemsProducto'
+import ItemsProducto from '../ItemProductos/ItemsProducto'
 import {  ItemProducto, ListaProductos } from './styles'
 import { ctxProducto } from '../../contextos/CarritoContexto'
 import { reducerArray } from '../../funciones/reducerArray'

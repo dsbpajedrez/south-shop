@@ -1,5 +1,5 @@
 import React from 'react'
-import Productos from '../../componentes/productos/Productos'
+import Productos from '../../componentes/Productos/Productos'
 import useLlamadoAPI from '../../hooks/useLlamadoAPI'
 import { Titulo } from './styles'
 

@@ -1,8 +1,8 @@
 import React, {useState,useContext} from 'react'
 import { Container, ItemsNavegacion, Links, Logo, Navegacion, RightSide } from './styles'
-import MenuCarrito from '../menuCarrito/MenuCarrito'
+import MenuCarrito from '../MenuCarrito/MenuCarrito'
 import { ctxProducto } from '../../contextos/CarritoContexto'
-import CartWidget from '../cartWidget/CartWidget'
+import CartWidget from '../CartWidget/CartWidget'
 
 
 const NavBar = () => {
