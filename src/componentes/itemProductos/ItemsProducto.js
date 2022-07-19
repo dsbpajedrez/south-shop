@@ -8,6 +8,7 @@ const ItemsProducto = ({product}) => {
     <ItemProducto>
         <Titulo>{product.title}</Titulo>
         <Titulo>${product.price}</Titulo>
+        <Titulo>cant:{product.cantidad}</Titulo>
 
         <ContenedorImagenes>
         <img src={product.images[0]} 

@@ -11,10 +11,12 @@ const BotonLogIn = styled.button`
     
 `
 
-const Boton = ({texto, width,style})=>{
+const Boton = ({texto, width,style, onClick,disabled})=>{
     let boton = useRef();
     
     return(<BotonLogIn
+    disabled={disabled}
+        onClick={onClick}
         ref={boton}
         width={width}
         style={style}

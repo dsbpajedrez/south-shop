@@ -15,3 +15,11 @@ export const Boton = styled.button`
     padding:0.5rem;
     cursor:pointer;
 `
+export const LeftContainer = styled.div`
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    padding:1rem;
+    align-items:center;
+`

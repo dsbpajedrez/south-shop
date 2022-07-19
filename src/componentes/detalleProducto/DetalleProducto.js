@@ -3,17 +3,20 @@ import { useParams } from 'react-router-dom'
 import { ctxProducto } from '../../contextos/CarritoContexto'
 import OneProduct from '../../hooks/useProductById'
 import Producto from '../Producto/Producto'
-import { Boton, Container } from './style'
+import { Boton, Container, LeftContainer} from './style'
+import ItemCount from '../Counter/ItemCount'
 
 const DetalleProducto = () => {
-    const {addToCart,state} = useContext(ctxProducto)
-    console.log(state)
+    const {addToCart} = useContext(ctxProducto)
+   
     const id= useParams().id
     const product = OneProduct(id)
+
     
     return (
         <>
        {product &&
+      
         <Container>
             <Producto
             pointer='false'
@@ -22,8 +25,17 @@ const DetalleProducto = () => {
             images={product?.images ?? []}
             id={product?.id ?? ''}
             />
-            <Boton onClick={()=>addToCart(product)}>Add to cart</Boton>
+            <LeftContainer>
+                <ItemCount 
+                initial={0}
+                stock={3}
+                producto={product}/>
+                <Boton onClick={()=>addToCart(product)}>Add to cart</Boton>
+            </LeftContainer>
         </Container>
+           
+      
+
          }  
         </>
     )
