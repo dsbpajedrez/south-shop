@@ -8,7 +8,7 @@ const LinksSidebar = () => {
     <Links to='/'><Item>Home</Item></Links>
     <Links to='/'><Item>Productos</Item></Links>
     <Links to='/login'><Item>Login</Item></Links>
-    <Links to='/'><Item>Terminos y condiciones</Item></Links>
+    <Links to='/register'><Item>Registro</Item></Links>
   </Lista>
   )
 }
