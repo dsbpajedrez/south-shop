@@ -7,11 +7,9 @@ import { Boton, Container, LeftContainer} from './style'
 import ItemCount from '../Counter/ItemCount'
 
 const DetalleProducto = () => {
-    const {addToCart} = useContext(ctxProducto)
-   
+    const {addToCart} = useContext(ctxProducto)   
     const id= useParams().id
-    const product = OneProduct(id)
-
+    const product = OneProduct(id)  
     
     return (
         <>
@@ -30,7 +28,9 @@ const DetalleProducto = () => {
                 initial={0}
                 stock={3}
                 producto={product}/>
-                <Boton onClick={()=>addToCart(product)}>Add to cart</Boton>
+                <Boton onClick={()=>{
+                    if(product.cantidad>0) addToCart(product)                    
+                    }}>Add to cart</Boton>
             </LeftContainer>
         </Container>
            
