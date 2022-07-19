@@ -9,9 +9,10 @@ const ProductoContext = ({children})=>{
     const [state,setState]= useState(initialState)
 
     const addToCart = (payload)=>{
+        let existe = state.cart.find(item=>item.id==payload.id)
         setState({
             ...state,
-            cart: [...state.cart, payload]
+            cart: existe ==undefined? [...state.cart, payload]:[...state.cart]
         })       
     }
     const removeFromCart =payload=>{

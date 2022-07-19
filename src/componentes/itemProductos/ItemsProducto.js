@@ -4,11 +4,14 @@ import {ctxProducto} from '../../contextos/CarritoContexto'
 import { ItemProducto, ContenedorImagenes,Titulo } from './styles'
 const ItemsProducto = ({product}) => {
   const {removeFromCart} = useContext(ctxProducto)
+  
   return (
-    <ItemProducto>
+    <>
+    {product.cantidad>0 &&(
+      <ItemProducto>
         <Titulo>{product.title}</Titulo>
         <Titulo>${product.price}</Titulo>
-        <Titulo>cant:{product.cantidad}</Titulo>
+        <Titulo style={{display:'block',width:'100%'}}>cant:{product.cantidad}</Titulo>
 
         <ContenedorImagenes>
         <img src={product.images[0]} 
@@ -32,6 +35,10 @@ const ItemsProducto = ({product}) => {
             }}/>
         </ContenedorImagenes>
     </ItemProducto>
+    )}
+    </>
+    
+    
   )
 }
 
