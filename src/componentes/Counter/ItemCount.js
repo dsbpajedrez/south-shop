@@ -21,7 +21,7 @@ const ItemCount = ({producto, initial, stock}) => {
         disabled={counter<stock? false:true}
         onClick={onAdd}
         style={{
-            backgroundColor:'green',
+            backgroundColor:'var(--verde-claro)',
             width:'25%',
             fontSize:'2rem'
         }}
@@ -31,7 +31,7 @@ const ItemCount = ({producto, initial, stock}) => {
         disabled={counter<1?true:false}
         onClick={restar}
          style={{
-            backgroundColor:'red',
+            backgroundColor:'var(--rojo-soft)',
             width:'25%',
             fontSize:'2rem'
 

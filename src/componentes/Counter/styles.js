@@ -6,7 +6,7 @@ export const Container = styled.div`
     justify-content:space-around;
 `
 export const Input = styled.input`
-    border:1px solid black;
+    border:1px solid var(--fondo-gris);
     width:fit-content;
     text-align:center;
     border-radius: 1rem;
