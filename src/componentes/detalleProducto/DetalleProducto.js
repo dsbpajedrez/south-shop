@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import { useParams } from 'react-router-dom'
 import { ctxProducto } from '../../contextos/CarritoContexto'
 import OneProduct from '../../hooks/useProductById'
-import Producto from '../Producto/Producto'
+import Item from '../Producto/Item'
 import { Boton, Container, LeftContainer} from './style'
 import ItemCount from '../Counter/ItemCount'
 
@@ -16,7 +16,7 @@ const DetalleProducto = () => {
        {product &&
       
         <Container>
-            <Producto
+            <Item
             pointer='false'
             title={product?.title ?? ''}
             price={product?.price ?? 0}

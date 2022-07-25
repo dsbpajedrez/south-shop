@@ -1,8 +1,8 @@
 import React from 'react'
-import Producto from '../Producto/Producto'
+import Producto from '../Producto/Item'
 import { Contenedorproductos } from './styles'
 
-const Productos = ({products}) => {
+const ItemList = ({products}) => {
   return (
     <Contenedorproductos>
         {products?.length>0 && products?.map(item=> 
@@ -17,5 +17,4 @@ const Productos = ({products}) => {
     </Contenedorproductos>
   )
 }
-
-export default Productos
+export default ItemList

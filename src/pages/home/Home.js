@@ -1,5 +1,5 @@
 import React from 'react'
-import Productos from '../../componentes/Productos/Productos'
+import ItemList from '../../componentes/Productos/ItemList'
 import useLlamadoAPI from '../../hooks/useLlamadoAPI'
 import { Titulo } from './styles'
 
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Titulo>Nuestros Productos</Titulo>
-      <Productos products={pasarelaProductos}/>
+      <ItemList products={pasarelaProductos}/>
 
     </div>
   )
