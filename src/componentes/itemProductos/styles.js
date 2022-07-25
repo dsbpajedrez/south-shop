@@ -10,7 +10,8 @@ export const ItemProducto = styled.li`
 `
 export const Titulo = styled.p`
     color:var(--soft-white);
-    font-size:1.2rem;
+    font-size:1.8rem;
+    width:100%;
 `
 export const ContenedorImagenes = styled.div`
     display:flex;

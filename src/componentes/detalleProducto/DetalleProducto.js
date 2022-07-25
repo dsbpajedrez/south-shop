@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import { useParams } from 'react-router-dom'
 import { ctxProducto } from '../../contextos/CarritoContexto'
 import OneProduct from '../../hooks/useProductById'
-import Item from '../Producto/Item'
+import Item from '../Item/Item'
 import { Boton, Container, LeftContainer} from './style'
 import ItemCount from '../Counter/ItemCount'
 
