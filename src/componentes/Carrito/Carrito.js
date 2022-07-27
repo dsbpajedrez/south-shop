@@ -20,7 +20,7 @@ const Carrito = () => {
      )}
    <Bottom>
    <Titulo>Total: ${precioTotal}</Titulo>
-     <form action="http://localhost:3001/checkout/process" method="post">
+     <form action="https://thawing-fortress-23124.herokuapp.com/checkout/process" method="post">
      <input value={JSON.stringify(state.cart)} name='total' type='hidden' />
      <BotonCarrito  >Pagar</BotonCarrito  >
      </form>
