@@ -23,4 +23,4 @@ jobs:
           git config --global user.name <name>
         -name: deploy the app
         run: npm run deploy
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
+          GH_TOKEN: ${{secrets.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}}
