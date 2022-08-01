@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import close from '../../assets/icon_close.png'
 import {ctxProducto} from '../../contextos/CarritoContexto'
 import { ItemProducto, ContenedorImagenes,Titulo } from './styles'
-const ItemsProducto = ({product}) => {
+const ItemsListContainer = ({product}) => {
   const {removeFromCart} = useContext(ctxProducto)
   
   return (
@@ -42,4 +42,4 @@ const ItemsProducto = ({product}) => {
   )
 }
 
-export default ItemsProducto
+export default ItemsListContainer;

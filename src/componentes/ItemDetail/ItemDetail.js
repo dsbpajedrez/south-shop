@@ -2,7 +2,7 @@ import React from 'react'
 import { CardContainer, Imagen, Parrafo, TituloProducto, Anchor } from './styles'
 
 
-const Item = ({title,price, images,id, pointer='true'}) => {
+const ItemDetail = ({title,price, images,id, pointer='true'}) => {
   return (
     <CardContainer pointer={pointer}>
       <Anchor to={`/detail/${id}`} pointer={pointer} >
@@ -14,4 +14,4 @@ const Item = ({title,price, images,id, pointer='true'}) => {
   )
 }
 
-export default Item
+export default ItemDetail

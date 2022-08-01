@@ -1,12 +1,12 @@
 import React from 'react'
-import Producto from '../Item/Item'
+import ItemDetail from '../ItemDetail/ItemDetail'
 import { Contenedorproductos } from './styles'
 
 const ItemList = ({products}) => {
   return (
     <Contenedorproductos>
         {products?.length>0 && products?.map(item=> 
-        <Producto        
+        <ItemDetail        
         key={item.id}
         title={item.title}
         price={item.price}

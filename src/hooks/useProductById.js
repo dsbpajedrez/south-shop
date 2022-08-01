@@ -1,7 +1,7 @@
 import  {useEffect,useState} from "react";
 
-const OneProduct = (id)=>{
-
+const GetItem = (id)=>{
+    console.log(`id: ${id}`);
     const [producto, setProducto] = useState({})
     const API_PRODUCTS =`https://api.escuelajs.co/api/v1/products/${id}`
 
@@ -12,4 +12,4 @@ const OneProduct = (id)=>{
     },[id])
     return producto
 }
-export default OneProduct;
+export default GetItem;

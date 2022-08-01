@@ -1,7 +1,8 @@
 import React, {useContext, useState} from 'react'
 import { ctxProducto } from '../../contextos/CarritoContexto';
 import { reducerArray } from '../../funciones/reducerArray';
-import ItemsProducto from '../ItemProductos/ItemsProducto';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
+
 import { BotonCarrito, Bottom, ItemProducto, ListaProductos, Titulo, Total } from './styles';
 
 const Carrito = () => {
@@ -16,7 +17,7 @@ const Carrito = () => {
        <Titulo>Producto</Titulo>
    </ItemProducto>
    {state.cart.length>0 && state.cart.map(producto=>
-     <ItemsProducto product={producto} />
+     <ItemListContainer product={producto} />
      )}
    <Bottom>
    <Titulo>Total: ${precioTotal}</Titulo>

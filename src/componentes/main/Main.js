@@ -3,7 +3,7 @@ import { Container } from './styles'
 import { Routes, Route} from 'react-router-dom'
 import Home from '../../pages/Home/Home'
 import Register from '../../pages/Register/Register'
-import DetalleProducto from '../DetalleProducto/DetalleProducto'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 import LogIn from '../../pages/Login/LogIn'
 import Carrito from '../Carrito/Carrito'
 import NotFound from '../NotFound/NotFound'
@@ -14,7 +14,7 @@ const Main = () => {
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<LogIn/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/detail/:id' element={<DetalleProducto/>}/>
+          <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
           <Route path='/carrito' element={<Carrito/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>

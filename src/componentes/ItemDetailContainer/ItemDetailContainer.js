@@ -1,22 +1,22 @@
 import React,{useContext} from 'react'
 import { useParams } from 'react-router-dom'
 import { ctxProducto } from '../../contextos/CarritoContexto'
-import OneProduct from '../../hooks/useProductById'
-import Item from '../Item/Item'
+import GetItem from '../../hooks/useProductById'
+import ItemDetail from '../ItemDetail/ItemDetail'
 import { Boton, Container, LeftContainer} from './style'
 import ItemCount from '../Counter/ItemCount'
 
-const DetalleProducto = () => {
+const ItemDetailContainer = () => {
     const {addToCart} = useContext(ctxProducto)   
     const id= useParams().id
-    const product = OneProduct(id)  
-    
+    const product = GetItem(id)  
+    console.log(product);
     return (
         <>
        {product &&
       
         <Container>
-            <Item
+            <ItemDetail
             pointer='false'
             title={product?.title ?? ''}
             price={product?.price ?? 0}
@@ -41,4 +41,4 @@ const DetalleProducto = () => {
     )
     }
 
-export default DetalleProducto
+export default ItemDetailContainer
