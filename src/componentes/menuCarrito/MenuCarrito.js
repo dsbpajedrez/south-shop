@@ -16,7 +16,7 @@ const MenuCarrito = () => {
           )}
         <Bottom>
         <p>Total: ${state.cart.length>0 ? reducerArray(state.cart.map(producto=> {
-          console.log(producto);
+         
           return producto.price*producto.cantidad
           })):'0'}</p>
           <BotonCarrito to='/carrito' >Ir a carrito</BotonCarrito  >

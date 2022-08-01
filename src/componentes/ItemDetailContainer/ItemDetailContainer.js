@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const {addToCart} = useContext(ctxProducto)   
     const id= useParams().id
     const product = GetItem(id)  
-    console.log(product);
+  
     return (
         <>
        {product &&
