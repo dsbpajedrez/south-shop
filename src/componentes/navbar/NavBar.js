@@ -10,7 +10,9 @@ const NavBar = () => {
   const [menu, setMenu]= useState(false)
   return (
     <Container>
+      <Links to='/'>
         <Logo src='https://pbs.twimg.com/profile_images/573510708454813696/y-N-508i_400x400.png'/>
+      </Links>
         <Navegacion>
           <ItemsNavegacion><Links to='/'>Home</Links></ItemsNavegacion>
           <ItemsNavegacion><Links to='/'>Productos</Links></ItemsNavegacion>
