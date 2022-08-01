@@ -6,6 +6,7 @@ import Register from '../../pages/Register/Register'
 import DetalleProducto from '../DetalleProducto/DetalleProducto'
 import LogIn from '../../pages/Login/LogIn'
 import Carrito from '../Carrito/Carrito'
+import NotFound from '../NotFound/NotFound'
 const Main = () => {
   return (
     <Container>
@@ -15,6 +16,7 @@ const Main = () => {
           <Route path='/register' element={<Register/>}/>
           <Route path='/detail/:id' element={<DetalleProducto/>}/>
           <Route path='/carrito' element={<Carrito/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
     </Container>
   )
