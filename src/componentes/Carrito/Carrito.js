@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react'
 import { ctxProducto } from '../../contextos/CarritoContexto';
 import { reducerArray } from '../../funciones/reducerArray';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import ItemListContainer from '../Cart/Cart';
 
 import { BotonCarrito, Bottom, ItemProducto, ListaProductos, Titulo, Total } from './styles';
 

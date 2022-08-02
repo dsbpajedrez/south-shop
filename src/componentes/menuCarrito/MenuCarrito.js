@@ -1,8 +1,9 @@
 import React,{useContext} from 'react'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
+// import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import {  BotonCarrito, Bottom, ItemProducto, ListaProductos } from './styles'
 import { ctxProducto } from '../../contextos/CarritoContexto'
 import { reducerArray } from '../../funciones/reducerArray'
+import Cart from '../Cart/Cart'
 const MenuCarrito = () => {
   const {state} = useContext(ctxProducto)
   return (
@@ -12,7 +13,7 @@ const MenuCarrito = () => {
             <p>Producto</p>
         </ItemProducto>
         {state.cart.length>0 && state.cart.map(producto=>
-          <ItemListContainer product={producto} />
+          <Cart product={producto} />
           )}
         <Bottom>
         <p>Total: ${state.cart.length>0 ? reducerArray(state.cart.map(producto=> {
