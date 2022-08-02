@@ -14,10 +14,10 @@ const Main = () => {
   return (
     <Container>
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/' element={<ItemListContainer allProducts={true}/>}/>
           <Route path='/login' element={<LogIn/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/category/:id' element={<Category/>}/>
           <Route path='/carrito' element={<Carrito/>}/>
           <Route path='*' element={<NotFound/>}/>
