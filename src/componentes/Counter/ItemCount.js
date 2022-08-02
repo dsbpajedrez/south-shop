@@ -18,25 +18,25 @@ const ItemCount = ({producto, initial, stock}) => {
     <Container>
         
         <Boton
-        disabled={counter<stock? false:true}
-        onClick={onAdd}
-        style={{
-            backgroundColor:'var(--verde-claro)',
-            width:'25%',
-            fontSize:'2rem'
-        }}
-        texto='+'/>
-        <Input value={counter}/>
-        <Boton
         disabled={counter<1?true:false}
         onClick={restar}
          style={{
-            backgroundColor:'var(--rojo-soft)',
-            width:'25%',
-            fontSize:'2rem'
-
-        }}
+             backgroundColor:'var(--rojo-soft)',
+             width:'25%',
+             fontSize:'2rem'
+             
+            }}
         texto='-'/>
+        <Input value={counter}/>
+            <Boton
+            disabled={counter<stock? false:true}
+            onClick={onAdd}
+            style={{
+                backgroundColor:'var(--verde-claro)',
+                width:'25%',
+                fontSize:'2rem'
+            }}
+            texto='+'/>
 
     </Container>
   )
