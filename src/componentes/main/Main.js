@@ -8,17 +8,20 @@ import Carrito from '../Carrito/Carrito'
 import NotFound from '../NotFound/NotFound'
 import Category from '../Category/Category'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import useLlamadoAPI from '../../hooks/useLlamadoAPI'
+const API_PRODUCTS ='https://api.escuelajs.co/api/v1/products'
 
 
 const Main = () => {
+  let answer=useLlamadoAPI(API_PRODUCTS)
   return (
     <Container>
         <Routes>
-          <Route path='/' element={<ItemListContainer allProducts={true}/>}/>
+          <Route path='/' element={<ItemListContainer answer={answer}/>}/>
           <Route path='/login' element={<LogIn/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-          <Route path='/category/:id' element={<Category/>}/>
+          <Route path='/category/:id' element={<ItemListContainer/>}/>
           <Route path='/carrito' element={<Carrito/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
