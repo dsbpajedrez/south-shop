@@ -15,7 +15,6 @@ export const GlobalStyle = createGlobalStyle`
         --gris-claro:hsl(181, 2%, 71%);
         --fondo-gris:hsl(44, 24%, 80%);
         --animation-icons:#2c771c;
-        // --animation-icons:#437a84;
         --animation-base-color:#8e402a;
 
         --size-links: 1.6rem;
