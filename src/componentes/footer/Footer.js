@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container,SocialMediaImg } from './sytles'
-import linkedin_icon from '../../assets/linedin_icon.svg'
+import linkedin_icon from '../../assets/linkedin_icon.svg'
 import twitter_icon from '../../assets/twitter_icon.svg'
 import github_icon from '../../assets/github_icon.svg'
 const Footer = () => {
