@@ -1,16 +1,16 @@
 import React from 'react'
 import { Container,SocialMediaImg } from './sytles'
-import facebook_icon from '../../assets/facebook_icon.svg'
-import instagram_icon from '../../assets/instagram_icon.svg'
+import linkedin_icon from '../../assets/linedin_icon.svg'
+import twitter_icon from '../../assets/twitter_icon.svg'
 import github_icon from '../../assets/github_icon.svg'
 const Footer = () => {
   return (
     <Container>
-      <a href='https://www.facebook.com/david.benjumeaperez'>
-      <SocialMediaImg src={facebook_icon} />
+      <a href='https://www.linkedin.com/in/david-santiago-benjumea-p%C3%A9rez/'>
+      <SocialMediaImg src={linkedin_icon} />
       </a>
-      <a href='https://www.instagram.com/davidbenjumea94/'>
-      <SocialMediaImg src={instagram_icon} />
+      <a href='https://twitter.com/DavidSBenjumea'>
+      <SocialMediaImg src={twitter_icon} />
       </a>
       <a href='https://github.com/dsbpajedrez'>
       <SocialMediaImg src={github_icon} />
