@@ -1,6 +1,6 @@
 {
   "name": "south-shop-benjumea-perez",
-  "homepage":"https://south-shop.net",
+  "homepage": "https://south-shop.net",
   "version": "0.1.0",
   "engines": {
     "node": "16.15",
@@ -16,6 +16,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
+    "surge": "^0.23.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -23,8 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build -r https://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/dsbpajedrez.github.io/south-shop-benjumea-perez/"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://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/dsbpajedrez.github.io/south-shop-benjumea-perez/"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +48,4 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   }
-  
 }
