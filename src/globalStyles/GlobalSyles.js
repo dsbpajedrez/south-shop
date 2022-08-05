@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         margin:0;
         padding:0;
         font-size:62.5%;
-        overflow-x:hidden;
+        overflow:hidden;
 
         --verde-claro :hsl(116, 73%, 74%);
         --rojo-soft:hsl(0, 72%, 53%);

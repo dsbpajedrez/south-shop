@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const Container = styled.div`
     grid-column:1/14;
-    grid-row:1/3; 
+    grid-row:1/2; 
     
     display:flex;
     justify-content:space-between;

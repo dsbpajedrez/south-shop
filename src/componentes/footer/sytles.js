@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div` 
     grid-column: 1/14;
-    grid-row:7/8;
+    grid-row:8/9;
     display:flex;
     justify-content:space-around;
     padding:0.5rem;
-    background-color: var(--fondo-gris); 
+    background-color: var(--fondo-gris);
+    z-index:200; 
 `
 export const SocialMediaImg = styled.img`
     width:70px;
