@@ -25,7 +25,8 @@ const NavBar = () => {
         </Navegacion>
         <RightSide >
           <p>{state?.user? state.user:'Invitado'}</p>
-         <CartWidget state={state} setMenu={setMenu} menu={menu}/>          
+          {state?.user?<CartWidget state={state} setMenu={setMenu} menu={menu}/> :<></>}
+                  
           {menu && <MenuCarrito/>}   
 
                 

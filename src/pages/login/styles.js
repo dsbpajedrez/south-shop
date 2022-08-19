@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
-    grid-column:5/13;
-    grid-row:2/5;
+    grid-column:3/13;
+    grid-row:3/6;
     width:auto;
     height:100%;
     padding:0.5rem;
@@ -11,7 +11,8 @@ export const Container = styled.div`
     border-radius:20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color:white;
-    background-color:var(--verde-claro);
+    // background-color:var(--verde-claro);
+    background-color:var(--color-marron);
 `
 export const FormularioLogIn = styled.form`
     display:flex;
@@ -22,12 +23,14 @@ export const FormularioLogIn = styled.form`
 `
 export const Label = styled.label`
     width:50%;
+    font-size:2rem;
 `
 export const Input = styled.input` 
     width:50%;
 `
 export const Titulo = styled.h1`
     withd:100%;
+    font-size:2.4rem;
     text-align:center;
 `
 export const Redirection = styled(Link)`

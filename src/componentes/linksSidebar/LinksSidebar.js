@@ -25,7 +25,8 @@ const LinksSidebar = () => {
     <Links to='/category/3'><Item>Furnitures</Item></Links>
     <Links to='/category/4'><Item>Shoes</Item></Links>
     <Links to='/category/5'><Item>Others</Item></Links>
-    {state?.user?<Links onClick={()=> toSignOut(auth)} to='#'><Item style={{color:'red'}}>Sign out</Item></Links>:<></>}
+    {/* {state?.user?<Links onClick={()=> toSignOut(auth)} to='#'><Item style={{color:'red'}}>Sign out</Item></Links>:<></>} */}
+    <Links onClick={()=> toSignOut(auth)} to='#'><Item style={{color:'red'}}>Sign out</Item></Links>
   </Lista>
   )
 }

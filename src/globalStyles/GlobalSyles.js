@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         overflow:hidden;
 
         --verde-claro :hsl(116, 73%, 74%);
+        --color-marron:#f2b674;
         --rojo-soft:hsl(0, 72%, 53%);
         --soft-white:hsl(169, 9%, 99%);
         --azul-claro:hsl(181, 32%, 63%);
