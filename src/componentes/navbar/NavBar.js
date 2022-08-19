@@ -3,11 +3,24 @@ import { Container, ItemsNavegacion, Links, Logo, Navegacion, RightSide } from '
 import MenuCarrito from '../MenuCarrito/MenuCarrito'
 import { ctxProducto } from '../../contextos/CarritoContexto'
 import CartWidget from '../CartWidget/CartWidget'
+import { signOut, getAuth } from 'firebase/auth'
+import { credential } from '../ConfigFirebase/Config'
+
+const auth = getAuth(credential)
 
 
 const NavBar = () => {
-  const {state} =useContext(ctxProducto)
+  const {state, setState} =useContext(ctxProducto)
+  console.log(state);
   const [menu, setMenu]= useState(false)
+
+  const toSignOut = (arg)=>{
+    setState({
+      ...state,
+      user:null
+    })
+    signOut(arg)
+  }
   return (
     <Container>
       <Links to='/'>
@@ -20,9 +33,11 @@ const NavBar = () => {
           <ItemsNavegacion><Links to='/'>Términos y condiciones</Links></ItemsNavegacion>
         </Navegacion>
         <RightSide >
-          <p>Email</p>
+          <p>{state?.user? state.user:'Invitado'}</p>
          <CartWidget state={state} setMenu={setMenu} menu={menu}/>          
-          {menu && <MenuCarrito/>}          
+          {menu && <MenuCarrito/>}   
+          {state?.user?<button onClick={()=>toSignOut(auth)}>Sign out</button> :<></>}
+                
         </RightSide>
     </Container>
   )

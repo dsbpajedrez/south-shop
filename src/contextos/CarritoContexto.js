@@ -4,6 +4,7 @@ export const ctxProducto = React.createContext({})
 
 const ProductoContext = ({children})=>{
     const initialState = {
+        user:null,
         cart:[]
     }
     const [state,setState]= useState(initialState)
@@ -22,7 +23,7 @@ const ProductoContext = ({children})=>{
         })        
     }
     return(
-        <ctxProducto.Provider value={{state,addToCart,removeFromCart}} >
+        <ctxProducto.Provider value={{state,addToCart,removeFromCart,setState}} >
             {children}
         </ctxProducto.Provider>
     )

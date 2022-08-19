@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
+    grid-column:5/13;
+    grid-row:2/5;
     width:auto;
     height:100%;
     padding:0.5rem;
@@ -26,4 +29,8 @@ export const Input = styled.input`
 export const Titulo = styled.h1`
     withd:100%;
     text-align:center;
+`
+export const Redirection = styled(Link)`
+    font-size: 2rem;
+    margin-top:0.5rem;
 `

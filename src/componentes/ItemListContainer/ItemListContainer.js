@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, cloneElement} from 'react'
 import ItemList from '../ItemList/ItemList'
 import { Titulo } from './styles'
 import useLlamadoAPI from '../../hooks/useLlamadoAPI'
 import { useParams } from 'react-router-dom'
+import {getFirestore, getDocs,doc,collection} from 'firebase/firestore'
 
 
 const ItemListContainer = ({ answer}) => { 
@@ -44,6 +45,19 @@ const ItemListContainer = ({ answer}) => {
        categoryTitle()
       }                  
   },[id])
+  useEffect(()=>{
+    const db = getFirestore()
+    const docRef= collection(db,'productos')
+    getDocs(docRef)
+      .then((snapshot)=>{
+      
+        const data=snapshot.docs.map(item=>({
+          id: item.id,
+          data: item.data()
+        }))   
+        console.log(data);
+      }).catch(e=>console.log(e))
+  },[])
 
   return (
     <div>
