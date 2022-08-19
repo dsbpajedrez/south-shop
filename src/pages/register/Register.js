@@ -9,20 +9,25 @@ import { ctxProducto } from '../../contextos/CarritoContexto'
 const Ragister = () => {
   const {setState,state} = useContext(ctxProducto)
   const auth= getAuth(credential)
-  const [email,setEmail]=useState('')
-  const [password,setPassword]=useState('')
+  const [email,setEmail]=useState(null)
+  const [password,setPassword]=useState(null)
+  const [name,setName] = useState(null)
 
   const submit = async(event)=>{
     event.preventDefault()
     try{
-      const infoUser= createUserWithEmailAndPassword(auth,email,password)
+      const infoUser= await createUserWithEmailAndPassword(auth,email,password, name)
       setState({
         ...state,
         user:email
       })
 
     }catch(e){
-      console.log(`Detalles del error: ${e}`);
+      alert(`Detalles del error: ${e}`);
+      setState({
+        ...state,
+        user:null
+      })
     }
   }
   return (
@@ -30,7 +35,7 @@ const Ragister = () => {
       <FormularioLogIn>
         <Titulo>Registrate hoy!</Titulo>
         <Label>Nombre</Label>
-        <Input type='text' name='nombre'/>
+        <Input type='text' name='nombre' onChange={event=>setName(event.target.value)}/>
         <Label>Email</Label>
         <Input type='email' name='email'onChange={event=> setEmail(event.target.value)} />
         <Label>Contraseña</Label>
