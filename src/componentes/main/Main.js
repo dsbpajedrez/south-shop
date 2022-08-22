@@ -10,11 +10,12 @@ import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import useLlamadoAPI from '../../hooks/useLlamadoAPI'
 import SideBar from '../Sidebar/SideBar'
 import LinksSidebar from '../LinksSidebar/LinksSidebar'
+import ItemDetailFireStore from '../fireStoreData/ProducsFireStore/ProductsFireStore'
 const API_PRODUCTS ='https://api.escuelajs.co/api/v1/products'
 
 
 const Main = () => {
-  let answer=useLlamadoAPI(API_PRODUCTS)
+  const answer = ItemDetailFireStore('productos')
   return (
     <>
        <SideBar>

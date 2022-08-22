@@ -9,7 +9,6 @@ import { ctxProducto } from '../../contextos/CarritoContexto'
 
 const NavBar = () => {
   const {state, setState} =useContext(ctxProducto)
-  console.log(state);
   const [menu, setMenu]= useState(false)
 
   return (

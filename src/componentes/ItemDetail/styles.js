@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const CardContainer = styled.div`
     border:1px solid var(--gris-claro);
+    height:fit-content;
     padding:0.5rem;
     width:fit-content;
     border-radius:1rem;

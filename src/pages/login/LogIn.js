@@ -19,7 +19,7 @@ const LogIn = () => {
           ...state,
           user:email
         })
-        console.log(log);
+    
       })
       .catch(e=>{
         setState({
