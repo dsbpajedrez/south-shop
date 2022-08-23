@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const {addToCart} = useContext(ctxProducto)   
     const id= useParams().id
     const product = ProducsFireStore(id) 
-    console.log(product);
+     
     return (
         <>
        {product &&      
@@ -25,10 +25,10 @@ const ItemDetailContainer = () => {
             <LeftContainer>
                 <ItemCount 
                 initial={0}
-                stock={3}
+                stock={product[0]?.stock??0}
                 producto={product}/>
                 <Boton onClick={()=>{
-                    if(product.cantidad>0) addToCart(product)                    
+                    if(product[0]?.cantidad>0) addToCart(product[0])                    
                     }}>Add to cart</Boton>
             </LeftContainer>
         </Container>

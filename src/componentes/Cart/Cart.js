@@ -7,14 +7,14 @@ const Cart = ({product}) => {
   
   return (
     <>
-    {product.cantidad>0 &&(
+    {product?.cantidad>0 &&(
       <ItemProducto>
-        <Titulo>{product.title}</Titulo>
-        <Titulo>${product.price}</Titulo>
-        <Titulo style={{display:'block',width:'100%'}}>cant:{product.cantidad}</Titulo>
+        <Titulo>{product?.title}</Titulo>
+        <Titulo>${product?.price}</Titulo>
+        <Titulo style={{display:'block',width:'100%'}}>cant:{product?.cantidad}</Titulo>
 
         <ContenedorImagenes>
-        <img src={product.images[0]} 
+        <img src={product?.image} 
         style={
             {
                 width:'70px',

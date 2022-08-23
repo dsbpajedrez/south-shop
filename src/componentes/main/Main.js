@@ -1,17 +1,14 @@
 import React from 'react'
 import { Container } from './styles'
 import { Routes, Route} from 'react-router-dom'
-import Register from '../../pages/Register/Register'
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
-import LogIn from '../../pages/Login/LogIn'
 import Carrito from '../Carrito/Carrito'
 import NotFound from '../NotFound/NotFound'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
-import useLlamadoAPI from '../../hooks/useLlamadoAPI'
 import SideBar from '../Sidebar/SideBar'
 import LinksSidebar from '../LinksSidebar/LinksSidebar'
 import ItemDetailFireStore from '../fireStoreData/ProducsFireStore/ProductsFireStore'
-const API_PRODUCTS ='https://api.escuelajs.co/api/v1/products'
+
 
 
 const Main = () => {

@@ -11,8 +11,7 @@ const ProducsFireStore = (id)=>{
             )
             getDocs(getDoc)
                 .then(doc=>{                    
-                    setProduct(doc?.docs?.map(item=>{
-                        console.log(item);
+                    setProduct(doc?.docs?.map(item=>{                       
                         return {
                         id:item.id,
                         ...item.data()

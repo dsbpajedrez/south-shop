@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ProductsFireStore = (collectionName)=>{
-    ;
     const [items, setItems] = useState()
     useEffect(()=>{
         const db = getFirestore()
@@ -13,6 +12,8 @@ const ProductsFireStore = (collectionName)=>{
             }).catch(error => console.log(error))
        
     },[])
-    return items
+    let resultado=items?.docs?.map(item=>item.data())
+        
+    return resultado
 }
 export default ProductsFireStore;

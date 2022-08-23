@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import { Input , Container} from './styles'
 import Boton from '../../estilosComunes/BotonLogIn'
 
@@ -13,7 +13,10 @@ const ItemCount = ({producto, initial, stock}) => {
             setCounter(counter-1)            
         } 
     }
-    producto.cantidad = counter;
+   useEffect(()=>{
+    producto[0].cantidad = counter;
+   },[counter])
+    
   return (
     <Container>
         

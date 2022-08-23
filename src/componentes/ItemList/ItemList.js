@@ -3,16 +3,16 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { Contenedorproductos } from './styles'
 
 const ItemList = ({products}) => {
- 
+ console.log(products);
   return (
     <Contenedorproductos>
-        {products?.docs?.length>0 && products?.docs?.map(item=> {
+        {products?.length>0 && products?.map(item=> {
     
           return(<ItemDetail        
-          key={item?.data()?.id}
-          title={item?.data()?.title}
-          price={item?.data()?.price}
-          image={item?.data()?.image}
+          key={item?.id}
+          title={item?.title}
+          price={item?.price}
+          image={item?.image}
           id={item?.id}
           />)
 })}
