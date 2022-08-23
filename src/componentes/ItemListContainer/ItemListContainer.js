@@ -1,41 +1,33 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import ItemList from '../ItemList/ItemList'
 import { Titulo } from './styles'
 import { useParams } from 'react-router-dom'
+import CategoriesFireStore from '../fireStoreData/CategoriesFireStore/CategoriesFireStore'
 
 const ItemListContainer = ({ answer}) => { 
-  const {id} = useParams()
-  
-  const [category,setCategory] = useState()
-  const [data, setData] = useState([])
-  const [type,setType]=useState()
+  const {id} = useParams()  
   const categoryTitle =()=>{
     switch (id) {
-      case '1':
-        setType('Ropa')
-        break;
-      case '2':
-        setType('Electronicos')
-        break;
-      case '3':
-        setType('Muebles')
-        break;
-      case '4':
-        setType('Zapatos')
-        break;
-        case '5':
-          setType('Otros')
-          break;
-      default:
-        setType('Nuestros productos' )
-        break;
+      case '1':       
+        return 'ropa'      
+      case '2':       
+        return 'electronico'      
+      case '3':      
+        return 'muebles'      
+      case '4':       
+        return 'zapatos'      
+        case '5':       
+          return 'otros'        
+      default:       
+        return 'zapatos'
+    }
   }
-  }
-
+    const  category = CategoriesFireStore(categoryTitle())
+    
   return (
     <div>
-      <Titulo>{type}</Titulo>
-      <ItemList products={answer}/>
+      <Titulo>{categoryTitle()}</Titulo>
+      <ItemList products={answer || category}/>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { Contenedorproductos } from './styles'
 
 const ItemList = ({products}) => {
- console.log(products);
+
   return (
     <Contenedorproductos>
         {products?.length>0 && products?.map(item=> {
