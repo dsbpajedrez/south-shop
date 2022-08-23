@@ -7,10 +7,8 @@ export const categoryTitle =(id)=>{
       case '3':      
         return 'muebles'      
       case '4':       
-        return 'zapatos'      
-        case '5':       
-          return 'otros'        
+        return 'zapatos'              
       default:       
-        return 'zapatos'
+        return 'otros'
     }
   }
