@@ -3,8 +3,9 @@ export const ctxProducto = React.createContext({})
 
 
 const ProductoContext = ({children})=>{
+    const userAtLocalStorage= localStorage.getItem('user')
     const initialState = {
-        user:null,
+        user:userAtLocalStorage?userAtLocalStorage:null,
         cart:[]
     }
     const [state,setState]= useState(initialState)

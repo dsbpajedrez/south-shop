@@ -19,7 +19,7 @@ const LogIn = () => {
           ...state,
           user:email
         })
-    
+        localStorage.setItem('user',email)
       })
       .catch(e=>{
         setState({
