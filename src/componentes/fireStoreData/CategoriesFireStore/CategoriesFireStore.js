@@ -2,7 +2,6 @@ import { useState,useEffect } from "react";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 const CategoriesFireStore = (category) =>{
-    console.log(category);
     const [ cat, setCat] = useState()
     useEffect(()=>{
         const db = getFirestore()
