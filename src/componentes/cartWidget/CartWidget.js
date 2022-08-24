@@ -4,12 +4,13 @@ import shoppingCart from '../../assets/icon_shopping_cart.svg'
 import shoppingCartNotification from '../../assets/icon_shopping_cart_notification.svg'
 
 const CartWidget = ({state,setMenu,menu}) => {
+  const cartFromLocal = JSON.parse(localStorage.getItem('cart'))
   return (
     <>
-    {state.cart.length>0 ?(
+    {cartFromLocal.length>0 ?(
         <>
         <IMGShoppingCart src={shoppingCartNotification}onClick={()=>setMenu(!menu)}/>
-        <NumeroItems>{state.cart.length}</NumeroItems>
+        <NumeroItems>{cartFromLocal.length}</NumeroItems>
         </>
       ) 
       : <IMGShoppingCart src={shoppingCart} onClick={()=>setMenu(!menu)}/>
