@@ -5,18 +5,26 @@ import { reducerArray } from '../../funciones/reducerArray'
 import Cart from '../Cart/Cart'
 const MenuCarrito = () => {
   const {state} = useContext(ctxProducto)
-  console.log(state);
+ const cartFromLocal =JSON.parse(localStorage.getItem('cart'))
+  const cartToBuy =()=>{
+    if(state?.cart?.length>cartFromLocal){
+      return state?.cart
+    }else{
+      return cartFromLocal
+    }
+  }
+ 
   return (
     <ListaProductos>
          <ItemProducto>
             <p>Item</p>
             <p>Producto</p>
         </ItemProducto>
-        {state.cart.length>0 && state.cart.map(producto=>
+        {cartToBuy()?.length>0 && cartToBuy()?.map(producto=>
           <Cart product={producto} />
           )}
         <Bottom>
-        <p>Total: ${state.cart.length>0 ? reducerArray(state.cart.map(producto=> {
+        <p>Total: ${cartToBuy()?.length>0 ? reducerArray(cartToBuy()?.map(producto=> {
      
           return Number(producto.price)*producto.cantidad
           })):'0'}</p>

@@ -18,10 +18,13 @@ const ProductoContext = ({children})=>{
         })       
     }
     const removeFromCart =payload=>{
+        console.log(payload);
+        localStorage.removeItem('cart')
         setState({
             ...state,
             cart: state.cart.filter(item=> item.id!=payload.id)
-        })        
+        }) 
+        localStorage.setItem('cart',JSON.stringify([...state.cart]))       
     }
     return(
         <ctxProducto.Provider value={{state,addToCart,removeFromCart,setState}} >

@@ -12,6 +12,33 @@ export const ListaProductos = styled.ul`
     padding:0.5rem;
     border-radius:1rem;
     height:fit-content;
+    overflow-y:auto;
+    overflow-x:hidden;
+    max-height:300px;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    &::-webkit-scrollbar:vertical {
+        width:1.2rem;
+    }
+    
+    &::-webkit-scrollbar-button:increment,&::-webkit-scrollbar-button {
+        display: none;
+    }  
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #797979;
+        border-radius: 20px;
+        border: 2px solid #f1f2f3;
+        :hover{
+            background-color: #333232;
+        }
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 1rem;  
+    }
 
 `
 export const ItemProducto = styled.li`

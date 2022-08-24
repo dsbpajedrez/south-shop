@@ -20,6 +20,7 @@ const LogIn = () => {
           user:email
         })
         localStorage.setItem('user',email)
+        localStorage.setItem('cart',JSON.stringify([]))
       })
       .catch(e=>{
         setState({

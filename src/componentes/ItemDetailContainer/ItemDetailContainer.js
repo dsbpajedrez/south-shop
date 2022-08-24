@@ -7,7 +7,7 @@ import ItemCount from '../Counter/ItemCount'
 import ProducsFireStore from '../fireStoreData/ProductFireStore/ProductFireStore'
 
 const ItemDetailContainer = () => {
-    const {addToCart} = useContext(ctxProducto)   
+    const {addToCart, state} = useContext(ctxProducto)   
     const id= useParams().id
     const product = ProducsFireStore(id) 
      
@@ -28,7 +28,11 @@ const ItemDetailContainer = () => {
                 stock={product[0]?.stock??0}
                 producto={product}/>
                 <Boton onClick={()=>{
-                    if(product[0]?.cantidad>0) addToCart(product[0])                    
+                    if(product[0]?.cantidad>0) {
+                        const send = [...(JSON.parse(localStorage.getItem('cart'))),product[0]]
+                        addToCart(send)
+                        localStorage.setItem('cart',JSON.stringify(send))
+                    }
                     }}>Add to cart</Boton>
             </LeftContainer>
         </Container>
