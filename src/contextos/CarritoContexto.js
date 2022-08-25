@@ -24,8 +24,7 @@ const ProductoContext = ({children})=>{
         setState({
             ...state,
             cart: state.cart.filter(item=> item.id!=payload.id)
-        }) 
-             
+        })             
     }
     return(
         <ctxProducto.Provider value={{state,addToCart,removeFromCart,setState}} >

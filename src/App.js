@@ -26,19 +26,6 @@ function App() {
 
   })
   
-  useEffect(()=>{
-    const db = getFirestore()
-    const docRef= doc(db,'productos','pVkL9xhUButEfEceDpLN')
-    getDoc(docRef)
-      .then((snapshot)=>{
-        if(snapshot.exists){
-          const datos = {
-            id: snapshot.id,
-            ...snapshot.data()
-          }
-        }
-      }).catch(e=>console.log(e))
-  },[])
   return (
     <BrowserRouter>
     <ProductoContext>
