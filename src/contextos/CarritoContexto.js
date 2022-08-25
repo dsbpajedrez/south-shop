@@ -1,4 +1,4 @@
-import React,{ useState } from "react"
+import React,{ useState, useEffect } from "react"
 export const ctxProducto = React.createContext({})
 
 
@@ -6,9 +6,12 @@ const ProductoContext = ({children})=>{
     const userAtLocalStorage= localStorage.getItem('user')
     const initialState = {
         user:userAtLocalStorage?userAtLocalStorage:null,
-        cart:[]
+        cart:localStorage.getItem('cart')? JSON.parse(localStorage.getItem('cart')):[]
     }
     const [state,setState]= useState(initialState)
+    useEffect(()=>{
+        localStorage.setItem('cart',JSON.stringify([...state.cart])) 
+    },[state])
 
     const addToCart = (payload)=>{
         let existe = state.cart.find(item=>item.id==payload.id)
@@ -17,14 +20,12 @@ const ProductoContext = ({children})=>{
             cart: existe ==undefined? [...state.cart, payload]:[...state.cart]
         })       
     }
-    const removeFromCart =payload=>{
-        console.log(payload);
-        localStorage.removeItem('cart')
+    const removeFromCart =payload=>{        
         setState({
             ...state,
             cart: state.cart.filter(item=> item.id!=payload.id)
         }) 
-        localStorage.setItem('cart',JSON.stringify([...state.cart]))       
+             
     }
     return(
         <ctxProducto.Provider value={{state,addToCart,removeFromCart,setState}} >

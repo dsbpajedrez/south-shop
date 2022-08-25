@@ -29,9 +29,10 @@ const ItemDetailContainer = () => {
                 producto={product}/>
                 <Boton onClick={()=>{
                     if(product[0]?.cantidad>0) {
-                        const send = [...(JSON.parse(localStorage.getItem('cart'))),product[0]]
-                        addToCart(send)
-                        localStorage.setItem('cart',JSON.stringify(send))
+                        
+                        // const send = [...(JSON.parse(localStorage.getItem('cart'))),product[0]]
+                        addToCart(product[0])
+                        // localStorage.setItem('cart',JSON.stringify(send))
                     }
                     }}>Add to cart</Boton>
             </LeftContainer>
