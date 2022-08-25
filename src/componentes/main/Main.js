@@ -9,8 +9,6 @@ import SideBar from '../Sidebar/SideBar'
 import LinksSidebar from '../LinksSidebar/LinksSidebar'
 import ItemDetailFireStore from '../fireStoreData/ProducsFireStore/ProductsFireStore'
 
-
-
 const Main = () => {
   const answer = ItemDetailFireStore('productos')
   return (

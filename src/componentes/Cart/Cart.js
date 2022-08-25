@@ -4,7 +4,6 @@ import {ctxProducto} from '../../contextos/CarritoContexto'
 import { ItemProducto, ContenedorImagenes,Titulo } from './styles'
 const Cart = ({product}) => {
   const {removeFromCart} = useContext(ctxProducto)
-
  
   return (
     <>

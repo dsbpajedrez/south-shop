@@ -8,7 +8,7 @@ import { ctxProducto } from '../../contextos/CarritoContexto'
 
 
 const NavBar = () => {
-  const {state, setState} =useContext(ctxProducto)
+  const {state} =useContext(ctxProducto)
   const [menu, setMenu]= useState(false)
 
   return (
