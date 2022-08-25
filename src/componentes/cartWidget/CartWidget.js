@@ -5,12 +5,13 @@ import shoppingCartNotification from '../../assets/icon_shopping_cart_notificati
 
 const CartWidget = ({state,setMenu,menu}) => {
   const cartFormLocal = JSON.parse(localStorage.getItem('cart'))
+
   return (
     <>
-    {cartFormLocal?.cart?.length>0 ?(
+    {cartFormLocal?.length>0 ?(
         <>
         <IMGShoppingCart src={shoppingCartNotification}onClick={()=>setMenu(!menu)}/>
-        <NumeroItems>{cartFormLocal?.cart?.length}</NumeroItems>
+        <NumeroItems>{cartFormLocal?.length}</NumeroItems>
         </>
       ) 
       : <IMGShoppingCart src={shoppingCart} onClick={()=>setMenu(!menu)}/>
