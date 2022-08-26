@@ -7,22 +7,29 @@ export const CardContainer = styled.div`
     padding:0.5rem;
     width:fit-content;
     border-radius:1rem;
+    @media(max-width:320px){
+        min-width:95%;
+    }
     min-width:300px;
     display:flex;
     flex-direction:column;
     align-items:center;
     background-color:white;
-    box-shadow:var(--sombras-cards);    
+    box-shadow:var(--sombras-cards);
     cursor:${({pointer})=> pointer =='true'? 'pointer':'initial'};
-    transition: 450ms all;
-    -webkit-transform-origin:center top;
-            transform-origin:center top;
-    &:hover{
-        -webkit-transform:translate3d(0,0,-100px);
-                transform:translate3d(0,0,100px);
-                transform:scale(1.1);
-                z-index:100;
-    };
+    @media(min-width:321px){
+        transition: 450ms all;
+        -webkit-transform-origin:center top;
+                transform-origin:center top;
+        &:hover{
+            -webkit-transform:translate3d(0,0,-100px);
+                    transform:translate3d(0,0,100px);
+                    transform:scale(1.1);
+                    z-index:100;
+        };
+    }
+     
+
  
         
 
@@ -31,6 +38,11 @@ export const Imagen = styled.img`
     width:240px;
     height:240px;
     object-fit:cover
+    @media(max-width:320px){
+        width:200px;
+        height:200px;
+        background-image:cover;
+    }
 `
 export const TituloProducto = styled.h2`
     font-size:var(size-subtitle);

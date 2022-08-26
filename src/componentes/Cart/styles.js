@@ -7,6 +7,7 @@ export const ItemProducto = styled.li`
     padding:0.5rem;
     width:100%;
    
+   
 `
 export const Titulo = styled.p`
     color:var(--soft-white);

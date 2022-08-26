@@ -25,9 +25,8 @@ const ItemCount = ({producto, initial, stock}) => {
         onClick={restar}
          style={{
              backgroundColor:'var(--rojo-soft)',
-             width:'25%',
              fontSize:'2rem'
-             
+            
             }}
         texto='-'/>
         <Input value={counter}/>
@@ -36,7 +35,6 @@ const ItemCount = ({producto, initial, stock}) => {
             onClick={onAdd}
             style={{
                 backgroundColor:'var(--verde-claro)',
-                width:'25%',
                 fontSize:'2rem'
             }}
             texto='+'/>

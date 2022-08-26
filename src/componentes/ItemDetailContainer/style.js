@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
     display:flex;
     justify-content:space-around;
+    @media(max-width:320px){
+        display:flex;
+        flex-direction:column;
+    }
 `
 export const Boton = styled.button`
     height:fit-content;

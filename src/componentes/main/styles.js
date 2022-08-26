@@ -4,8 +4,8 @@ export const Container = styled.div`
     grid-column:4/14;
     grid-row:2/8;
     padding:1rem;
+    overflow-x:hidden;
     overflow-y:auto;
-    height:100%;
     &::-webkit-scrollbar {
         -webkit-appearance: none;
     }
@@ -30,6 +30,9 @@ export const Container = styled.div`
 
     &::-webkit-scrollbar-track {
         border-radius: 1rem;  
+    }
+    @media(max-width:320px){
+        grid-column:1/14;
     }
 
 `

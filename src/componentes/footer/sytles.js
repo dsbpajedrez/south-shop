@@ -8,6 +8,10 @@ export const Container = styled.div`
     padding:0.5rem;
     background-color: var(--fondo-gris);
     z-index:200; 
+    @media(max-width:320px){
+      display:none;
+      flex-wrap:wrap;
+    }
 `
 export const SocialMediaImg = styled.img`
     width:70px;

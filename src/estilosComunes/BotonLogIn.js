@@ -7,7 +7,11 @@ const BotonLogIn = styled.button`
     border: 0.1rem solid var(--gris-claro);
     border-radius:1rem;
     cursor:pointer;
-    width: ${({width})=> width && width};
+    width: 25%;
+    @media(max-width:320px){
+        width:100%;
+    }
+   
     
 `
 

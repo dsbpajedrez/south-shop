@@ -39,6 +39,9 @@ export const ListaProductos = styled.ul`
     &::-webkit-scrollbar-track {
         border-radius: 1rem;  
     }
+    @media(max-width:320px){
+        width:28rem;
+    }
 
 `
 export const ItemProducto = styled.li`
