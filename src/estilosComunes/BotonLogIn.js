@@ -8,7 +8,7 @@ const BotonLogIn = styled.button`
     border-radius:1rem;
     cursor:pointer;
     width: 25%;
-    @media(max-width:320px){
+    @media(max-width:420px){
         width:100%;
     }
    

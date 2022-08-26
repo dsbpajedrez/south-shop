@@ -21,7 +21,7 @@ export const IMGShoppingCart = styled.img`
     height:3.5rem;
     cursor:pointer;
     position:relative;
-    @media(max-width:320px){
+    @media(max-width:420px){
         width:4rem;
         height:4rem;
     }
@@ -33,7 +33,7 @@ export const NumeroItems = styled.p`
     position:absolute;
     right:1.5px;
     top:0;
-    @media(max-width:320px){
+    @media(max-width:420px){
         width:0.5rem;
         height:0.5rem;
         right:12px;
@@ -43,7 +43,7 @@ export const NumeroItems = styled.p`
 `
 export const ParrafoUsuario=styled.p`
     display:block;
-    @media(max-width:320px){
+    @media(max-width:420px){
         display:none;
     }
 `
@@ -60,7 +60,7 @@ export const Navegacion = styled.ul`
     justify-content:space-between;
     list-style:none;
     gap:0.5rem;
-    @media(max-width:320px){
+    @media(max-width:420px){
         display:none;
     }
 `
@@ -69,15 +69,15 @@ export const ItemsNavegacion = styled.li`
 `
 export const Links = styled(Link)`
     color:white;
-    @media(max-width:320px){
+    @media(max-width:420px){
         display:none;
     }
 `
 export const MenuPhoneContainer= styled.div`
-    @media(max-width:320px){
+    @media(max-width:420px){
         display:block;
     }
-    @media(min-width:321px){
+    @media(min-width:421px){
         display:none;
     }
 `

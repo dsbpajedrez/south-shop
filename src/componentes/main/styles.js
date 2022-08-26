@@ -31,7 +31,7 @@ export const Container = styled.div`
     &::-webkit-scrollbar-track {
         border-radius: 1rem;  
     }
-    @media(max-width:320px){
+    @media(max-width:420px){
         grid-column:1/14;
     }
 

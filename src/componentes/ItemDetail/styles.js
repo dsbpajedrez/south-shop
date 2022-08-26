@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
     padding:0.5rem;
     width:fit-content;
     border-radius:1rem;
-    @media(max-width:320px){
+    @media(max-width:420px){
         min-width:95%;
     }
     min-width:300px;
@@ -38,7 +38,7 @@ export const Imagen = styled.img`
     width:240px;
     height:240px;
     object-fit:cover
-    @media(max-width:320px){
+    @media(max-width:420px){
         width:200px;
         height:200px;
         background-image:cover;

@@ -39,7 +39,7 @@ export const ListaProductos = styled.ul`
     &::-webkit-scrollbar-track {
         border-radius: 1rem;  
     }
-    @media(max-width:320px){
+    @media(max-width:420px){
         width:28rem;
     }
 

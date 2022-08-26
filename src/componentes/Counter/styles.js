@@ -4,7 +4,7 @@ export const Container = styled.div`
     width:100%;
     display:flex;
     justify-content:space-around;
-    @media(max-width:320px){
+    @media(max-width:420px){
         flex-direction:column-reverse;
         justify-content:space-around;
         min-height:100px;

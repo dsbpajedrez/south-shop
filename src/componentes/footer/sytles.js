@@ -8,7 +8,7 @@ export const Container = styled.div`
     padding:0.5rem;
     background-color: var(--fondo-gris);
     z-index:200; 
-    @media(max-width:320px){
+    @media(max-width:420px){
       display:none;
       flex-wrap:wrap;
     }
