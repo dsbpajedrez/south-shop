@@ -1,7 +1,7 @@
 import React, {useState,useContext} from 'react'
 import { Container, ItemsNavegacion, Links, Logo, MenuPhoneContainer, Navegacion, ParrafoUsuario, RightSide } from './styles'
-import MenuCarrito from '../MenuCarrito/MenuCarrito'
-import CartWidget from '../CartWidget/CartWidget'
+import MenuCarrito from '../menuCarrito/MenuCarrito'
+import CartWidget from '../cartWidget/CartWidget'
 
 import { ctxProducto } from '../../contextos/CarritoContexto'
 import MenuPhone from '../MenuPhone/MenuPhone'

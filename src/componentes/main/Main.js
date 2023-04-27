@@ -5,8 +5,8 @@ import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 import Carrito from '../Carrito/Carrito'
 import NotFound from '../NotFound/NotFound'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
-import SideBar from '../Sidebar/SideBar'
-import LinksSidebar from '../LinksSidebar/LinksSidebar'
+import SideBar from '../sidebar/SideBar'
+import LinksSidebar from '../linksSidebar/LinksSidebar'
 import ItemDetailFireStore from '../fireStoreData/ProducsFireStore/ProductsFireStore'
 
 const Main = () => {

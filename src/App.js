@@ -1,14 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 import { GlobalStyle } from './globalStyles/GlobalSyles';
 
-import Main from './componentes/Main/Main'
+import Main from './componentes/main/Main'
 import LayOut from './template/LayOut';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProductoContext, { ctxProducto } from './contextos/CarritoContexto';
 
 import {getFirestore, getDoc,doc} from 'firebase/firestore'
-import LogIn from './pages/Login/LogIn';
-import Ragister from './pages/Register/Register';
+import LogIn from './pages/login/LogIn';
+import Ragister from './pages/register/Register';
 import NotFound from './componentes/NotFound/NotFound';
 import { onAuthStateChanged, getAuth } from 'firebase/auth';
 import { credential } from './componentes/ConfigFirebase/Config';
